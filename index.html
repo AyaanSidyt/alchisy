@@ -42,15 +42,16 @@ Ima      <image href="./logo.png" x="32%" y="15%" text-anchor="middle" class="ma
       </mask>
     </defs>
   </svg>
-  <svg class="mask-svg mobile-svg" viewBox="0 0 1200 600" style="display: none;">
+  <svg class="mask-svg mobile-svg" viewBox="0  100% 100%" style="display: none; width: 100%; height: auto; margin: 0 auto;">
     <defs>
-      <mask id="text-mask-mobile" x="10%" y="0" width="100%" height="100%" maskUnits="userSpaceOnUse">
-        <rect width="100%" height="100%" fill="black" />
-        <image href="./logo.png" x="15%" y="1%" width="30%" class="mask-logo" />
-        <text x="0%" y="90%" class="mask-nav">ARTIST</text>
-        <text x="38%" y="90%" class="mask-nav">ACTOR</text>
-        <text x="60%" y="90%" class="mask-nav">CONTENT CREATOR</text>
-        <text x="83%" y="90%" class="mask-nav">APPLY TO JOIN</text>
+      <mask id="text-mask-mobile" x="0" y="0" width="100%" height="600" maskUnits="userSpaceOnUse">
+        <rect width="300" height="600" fill="black" />
+        <image href="./logo.png" x="15%" y="10%" width="150" height="40" class="mask-logo" style="z-index: 100;" />
+        <text x="50%" y="100%" text-anchor="middle" class="mask-nav">ARTIST</text>
+        <text x="50%" y="150%" text-anchor="middle" class="mask-nav">ACTOR</text>
+        <text x="50%" y="200%" text-anchor="middle" class="mask-nav">CONTENT CREATOR</text>
+        <text x="50%" y="250%" text-anchor="middle" class="mask-nav">APPLY TO JOIN</text>
+        <image x="40%" y="300%" text-anchor="middle" class="mask-chev" href="chevron.png" width="90" height="90"/>
       </mask>
     </defs>
   </svg>
@@ -71,29 +72,20 @@ Ima      <image href="./logo.png" x="32%" y="15%" text-anchor="middle" class="ma
     </div>
 <!-- instagram feed  -->
 <footer>
-  <div class="footer">
-  <div class="row">
-  <a href="https://www.facebook.com/profile.php?id=100076401822454"target="_blank"><i class='bx bxl-facebook' style='color:#ff69bc'  ></i></a>
-  <a href="https://www.instagram.com/ayaansidyt/" target="_blank"><i class='bx bxl-instagram' style='color:#ff69bc'  ></i></a>
-           <a href="https://www.linkedin.com/in/ayaan-siddiqui-a924a3220/" target="_blank"><i class='bx bxl-linkedin' style='color:#ff69bc'  ></i></a>
-           <a href="https://github.com/AyaanSidyt" target="_blank"><i class='bx bxl-github' style='color:#ff69bc'  ></i></a>
-  </div>
-  
-  <div class="row">
-  <ul>
-  <li><a >Actors</a></li>
-  <li><a></a>Content Creators</li>
-  <li><a>Artist</a></li>
-  <li><a>About</a></li>
-  
-  </ul>
-  </div>
-  
-  <div class="row">
-  INFERNO Copyright © 2021 Inferno - All rights reserved || made by: Ayaan Siddiqui
-  </div>
-  </div>
+  <footer class="minimal-footer">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="copyright">
+        © 2025 Your Company. All rights reserved.
+      </p>
+    </div>
   </footer>
+  
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const posts = document.querySelectorAll('.es-post');
