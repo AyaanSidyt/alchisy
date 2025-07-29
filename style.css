@@ -123,6 +123,11 @@ ul .fa-bars{
       object-fit: cover;
       mask: url(#text-mask);
       -webkit-mask: url(#text-mask);
+      -webkit-mask-type: alpha;
+      mask-type: alpha;
+    }
+    .background-video {
+      background-color: black; /* fallback for failed mask */
     }
 .mask-svg {
   width: 100vw;
