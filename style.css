@@ -305,7 +305,7 @@ margin-left: 40px;
 }
 .ios-fallback {
   width: 100vw;
-  height: 40vh;
+  height: 70vh;
   background-color: #ffffff;
   color: #000000;
   display: flex;
@@ -336,7 +336,6 @@ margin-left: 40px;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 30px;
-
   font-family: 'Oswald';
 }
 
