@@ -25,6 +25,7 @@
   <video class="background-video" autoplay muted loop playsinline>
     <source src="video.mp4" type="video/mp4">
   </video>
+  <img src="mask-text.png" class="png-mask" style="display: none; width: 100%;" />
 
   <!-- Mask SVG definition -->
   <svg class="mask-svg desktop-svg" viewBox="0 0 1200 600">
@@ -55,6 +56,19 @@ Ima      <image href="logo.png" x="22%" y="15%" text-anchor="middle" class="mask
       </mask>
     </defs>
   </svg>
+</div>
+<!-- iOS fallback only -->
+<div class="ios-fallback" style="display: none;">
+  <div class="ios-header">
+    <img src="logo.png" alt="ALCHISY Logo" class="ios-logo" />
+    <nav class="ios-nav">
+      <a href="#">ARTISTS</a>
+      <a href="#">ACTORS</a>
+      <a href="#">CONTENT CREATORS</a>
+      <a href="#">APPLY TO JOIN</a>
+    </nav>
+    <div class="ios-chevron">⌄</div>
+  </div>
 </div>
 <!-- responsive mask cont -->
 
@@ -100,14 +114,25 @@ Ima      <image href="logo.png" x="22%" y="15%" text-anchor="middle" class="mask
 
   
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const posts = document.querySelectorAll('.es-post');
-  posts.forEach(post => {
-    post.style.height = 'auto'; // Reset height if previously fixed
-  });
-});
+  
 
-</script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    if (isIOS) {
+      // Hide the SVG-masked section
+      const svgSection = document.querySelector('.svg-mask');
+      if (svgSection) svgSection.style.display = 'none';
+
+      // Show the fallback
+      const iosFallback = document.querySelector('.ios-fallback');
+      if (iosFallback) iosFallback.style.display = 'flex';
+    }
+  });
+
+
+  </script>
+  
 
 
 

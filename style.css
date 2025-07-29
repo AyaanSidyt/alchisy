@@ -303,3 +303,71 @@ margin-left: 40px;
     font-size: 10px;
   }
 }
+.ios-fallback {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.ios-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ios-logo {
+  width: 250px;
+  max-width: 80vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.ios-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ios-nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.ios-nav a:hover {
+  color: #555;
+}
+
+.ios-chevron {
+  font-size: 2rem;
+  animation: bounce 1.2s infinite;
+  color: #000;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .ios-header {
+    gap: 1.2rem;
+  }
+
+  .ios-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
