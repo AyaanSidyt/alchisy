@@ -324,30 +324,57 @@ margin-left: 40px;
 }
 
 .ios-logo {
-  width: 250px;
+  width: 85%;
   max-width: 80vw;
   height: auto;
   object-fit: contain;
+  margin-top: 180px;
 }
 
 .ios-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 30px;
+  gap: 4rem;
+
 
   font-family: 'Oswald';
 }
 
 .ios-nav a {
   text-decoration: none;
-  font-size: 1.1rem;
-  color: #000;
+  font-size: 1.7rem;
   font-weight: 600;
-  transition: color 0.3s ease;
   font-family: 'Oswald';
+  position: relative;
+  display: inline-block;
+
+  background: linear-gradient(
+    120deg,
+    #000000 0%,
+    #6a0dad 40%,
+    #b266ff 50%,
+    #6a0dad 60%,
+    #000000 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3s linear infinite;
 }
+
+@keyframes shine {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 
 .ios-nav a:hover {
   color: #555;
@@ -368,10 +395,12 @@ margin-left: 40px;
 @media (max-width: 768px) {
   .ios-header {
     gap: 1.2rem;
+    margin-top: 130px;
   }
 
   .ios-nav {
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
   }
+  
 }
