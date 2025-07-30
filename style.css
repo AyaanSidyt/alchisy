@@ -6,7 +6,7 @@
 
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 body{
     background-color: #ffffff;
@@ -17,6 +17,7 @@ body{
 }
 .material-icons{
   margin-left: 90px;
+  cursor: pointer;
 }
 ul{
     list-style: none;
