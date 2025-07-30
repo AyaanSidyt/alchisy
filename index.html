@@ -20,71 +20,41 @@
 </div>
 
     </ul>
-   <div class="mask-container">
-  <!-- Video masked by text -->
-  <video class="background-video" autoplay muted loop playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-  <img src="mask-text.png" class="png-mask" style="display: none; width: 100%;" />
+   
+<!-- Main masked logo -->
+ <div class="mask-div">
 
-  <!-- Mask SVG definition -->
-  <svg class="mask-svg desktop-svg" viewBox="0 0 1200 600">
-    <defs>
-      <mask id="text-mask" x="0" y="0" width="100%" height="100%" maskUnits="userSpaceOnUse">
-        <!-- Black background hides video -->
-        <rect width="100%" height="100%" fill="black " x="60%"/>
-        <!-- White text reveals video -->
-Ima      <image href="logo.png" x="22%" y="15%" text-anchor="middle" class="mask-logo" />
- <text x="15%" y="75%" text-anchor="middle" class="mask-nav" >ARTIST</text>
-          <text x="40%" y="75%" text-anchor="middle" class="mask-nav">ACTOR</text>
-          <text x="65%" y="75%" text-anchor="middle" class="mask-nav">CONTENT CREATOR</text>
-          <text x="90%" y="75%" text-anchor="middle" class="mask-nav">APPLY TO JOIN</text>
-          <image x="50%" y="85%" text-anchor="middle" class="mask-chev" href="chevron.png"/>
-      </mask>
-    </defs>
-  </svg>
-  <svg class="mask-svg mobile-svg" viewBox="0  100% 100%" style="display: none; width: 100%; height: auto; margin: 0 auto;">
-    <defs>
-      <mask id="text-mask-mobile" x="0" y="0" width="100%" height="600" maskUnits="userSpaceOnUse">
-        <rect width="300" height="600" fill="black" />
-        <image href="logo.png" x="15%" y="10%" width="150" height="40" class="mask-logo" style="z-index: 100;" />
-        <text x="50%" y="100%" text-anchor="middle" class="mask-nav">ARTIST</text>
-        <text x="50%" y="150%" text-anchor="middle" class="mask-nav">ACTOR</text>
-        <text x="50%" y="200%" text-anchor="middle" class="mask-nav">CONTENT CREATOR</text>
-        <text x="50%" y="250%" text-anchor="middle" class="mask-nav">APPLY TO JOIN</text>
-        <image x="40%" y="300%" text-anchor="middle" class="mask-chev" href="chevron.png" width="90" height="90"/>
-      </mask>
-    </defs>
-  </svg>
-  <div class="ios-fallback" style="display: none;">
-  <div class="ios-header">
-    <div class="ios-logo-wrapper">
-      <img src="ioslogo.png" alt="Logo" class="ios-logo" />
-      <div class="ios-logo-shine"></div>
+   <div class="mask-item">
+     <video class="mask-video" src="video.mp4" autoplay muted loop playsinline></video>
     </div>
-    
-    <nav class="ios-nav">
-      <a href="#">ARTISTS</a>
-      <a href="#">ACTORS</a>
-      <a href="#">CONTENT CREATORS</a>
-      <a href="#">APPLY TO JOIN</a>
-    </nav>
-    <div class="ios-chevron"><img src="chevron.png" alt="" width="40px"></div>
+
+  <!-- Links (masked with individual PNGs) -->
+  <div class="link-container">
+    <div class="link-mask link1">
+      <video src="video.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="link-mask link2">
+      <video src="video.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="link-mask link3">
+      <video src="video.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="link-mask link4">
+      <video src="video.mp4" autoplay muted loop playsinline></video>
+    </div>
   </div>
+
+  <div class="chevron-mask">
+    <video src="video.mp4" autoplay muted loop playsinline></video>
+  </div>
+
 </div>
-</div>
-<!-- iOS fallback only -->
-
-<!-- responsive mask cont -->
-
-
-
 
 
 <!-- responsive mask cont -->
 <!-- instagram feed  -->
  <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-  <div class="insf">
+  <div class="insf" id="instagram-feed">
 
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-4ab22fdd-9b3e-4132-a284-99f98cc6a692" data-elfsight-app-lazy></div>
@@ -121,7 +91,17 @@ Ima      <image href="logo.png" x="22%" y="15%" text-anchor="middle" class="mask
 <script>
   
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function scrollToInstagramFeed() {
+  const target = document.getElementById('instagram-feed');
+  if (target) {
+    console.log('Scrolling to Instagram feed');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    console.error('Instagram feed element not found');
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
     if (isIOS) {
@@ -133,6 +113,12 @@ Ima      <image href="logo.png" x="22%" y="15%" text-anchor="middle" class="mask
       const iosFallback = document.querySelector('.ios-fallback');
       if (iosFallback) iosFallback.style.display = 'flex';
     }
+
+    // Add click event listener to SVG chevron
+    const svgChevrons = document.querySelectorAll('.mask-chev');
+    svgChevrons.forEach(chevron => {
+      chevron.addEventListener('click', scrollToInstagramFeed);
+    });
   });
 
 
