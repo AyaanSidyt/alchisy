@@ -67,7 +67,7 @@ ul .fa-bars{
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 40px;
+      gap: 10px;
       padding: 20px;
     }
 
@@ -94,8 +94,8 @@ ul .fa-bars{
 
     .link-container {
       display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
+      gap: 10px;
+      
       justify-content: center;
       width: 100%;
     }
@@ -120,7 +120,7 @@ ul .fa-bars{
     .link4 { mask-image: url('atj.png'); -webkit-mask-image: url('atj.png'); }
 
     .link-mask video {
-      width: 100%;
+      width: 900px;
       height: 100%;
       object-fit: cover;
     }
@@ -134,7 +134,7 @@ ul .fa-bars{
       .link-container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 0px;
       }
 
       .link-mask {
@@ -162,7 +162,7 @@ ul .fa-bars{
     }
 
     .chevron-mask video {
-      width: 100%;
+      width: 2000px;
       height: 100%;
       object-fit: cover;
     }
@@ -174,13 +174,17 @@ ul .fa-bars{
   
   font-family: 'Arial', sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
-  border-top: 2px solid #eeff00; /* Yellow line */
+  
 }
 
 .social-icons {
   margin-bottom: 30px;
 }
-
+.insf{
+display: flex;
+align-items: center;
+justify-self: center;
+}
 .social-icons i {
   font-size: 28px;
   color: gray;
@@ -219,7 +223,8 @@ ul .fa-bars{
 .footer-line {
   border: none;
   height: 1px;
-  background-color: #fbff00;
+  background: linear-gradient(135deg, #FFD700 0%, #FFC300 25%, #FFB700 50%, #FFA500 75%, #FFD700 100%);
+
   margin: 20px auto;
   width: 90%;
 }
