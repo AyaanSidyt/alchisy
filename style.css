@@ -178,7 +178,7 @@ ul .fa-bars{
   text-align: center;
   padding: 40px 20px 20px;
   color: #999;
-  
+  border-top: 1px solid #FFA500;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
   
