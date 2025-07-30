@@ -218,9 +218,7 @@ ul .fa-bars{
   margin-bottom: 20px;
   font-size: 12px;
 }
-.insf{
-  margin-left: 35px;
-}
+
 .footer-links a {
   color: gray;
   text-decoration: none;
@@ -243,4 +241,13 @@ ul .fa-bars{
 .footer-bottom {
   font-size: 12px;
   color: #999;
+}
+.footer2lin{
+  border: none;
+  height: 1px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFC300 25%, #FFB700 50%, #FFA500 75%, #FFD700 100%);
+  margin: 20px auto;
+  width: 100%;
+position: relative;
+
 }
