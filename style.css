@@ -180,11 +180,14 @@ ul .fa-bars{
 .social-icons {
   margin-bottom: 30px;
 }
-.insf{
-display: flex;
-align-items: center;
-justify-self: center;
+.insf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
 }
+
 .social-icons i {
   font-size: 28px;
   color: gray;
