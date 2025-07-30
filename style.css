@@ -179,7 +179,7 @@ ul .fa-bars{
   text-align: center;
   padding: 40px 20px 20px;
   color: #999;
-  border-top: 1px solid #FFA500;
+  border-top: 3px solid #FFA500;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
   
@@ -199,16 +199,21 @@ ul .fa-bars{
 
 .social-icons i {
   font-size: 28px;
-  color: gray;
+  color: #B0AFB0;
   margin: 0 15px;
   transition: 0.3s;
   cursor: pointer;
 }
 .bigfoot{
   height: 150px;
+
+}
+.topfoot{
+  position: relative;
+top: 20%;
 }
 .social-icons i:hover {
-  color: #000;
+  color: #464546;
 }
 
 .footer-links {
@@ -221,13 +226,13 @@ ul .fa-bars{
 }
 
 .footer-links a {
-  color: gray;
+  color: #B0AFB0;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #000;
+  color: #464546;
 }
 
 .footer-line {
@@ -236,12 +241,12 @@ ul .fa-bars{
   background: linear-gradient(135deg, #FFD700 0%, #FFC300 25%, #FFB700 50%, #FFA500 75%, #FFD700 100%);
 
   margin: 20px auto;
-  width: 90%;
+  width: 50%;
 }
 
 .footer-bottom {
   font-size: 12px;
-  color: #999;
+  color: #B0AFB0;
 }
 .footer2lin{
   border: none;
