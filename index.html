@@ -30,18 +30,18 @@
 
   <!-- Links (masked with individual PNGs) -->
   <div class="link-container">
-    <div class="link-mask link1">
+   <a href=""> <div class="link-mask link1">
       <video src="video.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="link-mask link2">
+    </div></a>
+    <a href=""><div class="link-mask link2">
       <video src="video.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="link-mask link3">
+    </div></a>
+    <a href=""><div class="link-mask link3">
       <video src="video.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <div class="link-mask link4">
+    </div></a>
+    <a href=""><div class="link-mask link4">
       <video src="video.mp4" autoplay muted loop playsinline></video>
-    </div>
+    </div></a>
   </div>
 
   <div class="chevron-mask">
@@ -102,25 +102,6 @@
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-    if (isIOS) {
-      // Hide the SVG-masked section
-      const svgSection = document.querySelector('.svg-mask');
-      if (svgSection) svgSection.style.display = 'none';
-
-      // Show the fallback
-      const iosFallback = document.querySelector('.ios-fallback');
-      if (iosFallback) iosFallback.style.display = 'flex';
-    }
-
-    // Add click event listener to SVG chevron
-    const svgChevrons = document.querySelectorAll('.mask-chev');
-    svgChevrons.forEach(chevron => {
-      chevron.addEventListener('click', scrollToInstagramFeed);
-    });
-  });
 
 
   </script>
