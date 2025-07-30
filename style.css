@@ -13,6 +13,10 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+.material-icons{
+  margin-left: 90px;
 }
 ul{
     list-style: none;
@@ -145,6 +149,9 @@ ul .fa-bars{
         width: 70px;
         height: 70px;
       }
+      .material-icons{
+  margin-left: 10px;
+}
     }
 .chevron-mask {
       width: 100px;
@@ -184,8 +191,9 @@ ul .fa-bars{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .social-icons i {
